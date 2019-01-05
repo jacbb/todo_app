@@ -1,0 +1,50 @@
+#planner {}
+.grid{
+      height:80%;
+      width:75%;
+      background-color:#8DB600;
+      position:relative;
+}
+
+.remove{
+      margin-left:100%;
+}
+a:hover {
+      color:red;
+      opacity:1;
+ }
+.links {
+      background-color:#F5F5F5;
+ }
+.line {
+      background-color:#F5F5F5;
+      color:#6666FF;
+      width:90%;
+      margin-left:2%;
+      margin-right:1%;
+}
+h3:hover {
+      opacity:1;
+      color:blue;
+
+}
+.input {
+      width:99%;
+      height:10%;
+      font-size:110%;
+}
+.button1 {
+      background-color:blue;
+      color:white;
+      border-radius:20%;
+}
+.motto {
+      color:#6666FF;
+      margin-left:2%;
+}
+
+#title{}
+.title{
+      color:#A0D6B4;
+
+}

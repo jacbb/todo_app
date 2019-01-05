@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html5/strict.dtd">
+<html lang="en-US">
+<head>
+  <div>
+   <link rel="stylesheet" type = "text/css" href="planning.css">
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+   <script src ="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
+   <script src="planning.js"></script>
+  </div>
+</head>
+<br>
+<body>
+ <div ng-app="planner" id = "planner"> 
+  <center>
+   <table class="grid" ng-controller='todo'>
+    <tr>
+       <td>
+          <center><h2 id = "title" class ="title">TASKS FOR </h2></center> 
+          <div class = "links">
+            <div class="line" ng-repeat="x in task" ng-if="x.name">
+                <h3> {{x.name}}</h3> 
+                <a class = "remove" ng-click="remove($index)">Del</a>
+                <a class = "remove" ng-click="moveUp($index)">Up</a><hr>
+            </div> 
+          </div>
+          <textarea type="text" maxlength="65" class="input"  ng-model="binary_numb" placeholder="Enter a task then click add below..."></textarea>
+          <center>
+ 	         <button  class = "button1" ng-click="addTasks()">add</button>
+             <button  class = "button1" ng-click="clearList()">clear</button>
+           <div class = "motto"> Helping people plan while keeping everything locally to their browser. Items you enter can't be accessed in a different browser.</div>
+ 	      </center> 
+ 	      <br><br>
+       </td>
+     </tr>
+    </table>
+  </center> 
+  <script>
+ 	  var currdate = new Date();
+      document.getElementById("title").innerHTML += currdate.toDateString().toUpperCase();
+  </script>
+ </div>
+ 
+</body></html>
